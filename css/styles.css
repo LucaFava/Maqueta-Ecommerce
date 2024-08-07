@@ -16,6 +16,8 @@ ul {
   padding: 15px;
   background-color: #48e;
   font-family: "text";
+  position: sticky;
+  top: 0;
 }
 .nav .nav__logo {
   margin-left: 30px;
@@ -57,11 +59,54 @@ ul {
   transform: scale(1.1);
 }
 
-.inicio__main {
+.wrapper__main {
+  box-sizing: border-box;
   margin: auto;
-  max-width: 1200px;
-  min-height: 100dvh;
+  flex-grow: 1;
+  max-width: 1000px;
+  min-height: 92dvh;
   background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(350px, 1fr));
+  gap: 20px;
+  padding: 80px;
+}
+
+.card {
+  background-color: #f00;
+  max-width: clamp(300px, 40vw, 100%);
+  height: 100%;
+}
+
+.card:first-child {
+  grid-row: 1/span 2;
+}
+
+.container__aboutus {
+  box-sizing: border-box;
+  margin: auto;
+  flex-grow: 1;
+  max-width: 1000px;
+  min-height: 92dvh;
+  background-color: #fff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container__aboutus h1 {
+  font-family: "title";
+  font-size: 2.5rem;
+  margin: 30px;
+}
+.container__aboutus .aboutUs__subtitle {
+  font-family: "subtitle";
+}
+.container__aboutus .aboutUs__p {
+  font-family: "text";
+  font-size: 1.3rem;
+  max-width: 800px;
 }
 
 /*# sourceMappingURL=styles.css.map */

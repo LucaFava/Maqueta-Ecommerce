@@ -1,14 +1,18 @@
-.container__aboutus{
-    box-sizing: border-box;
+.container__main__aboutUs{
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: auto;
-    flex-grow: 1;
-    max-width: 1000px;
-    min-height: 92dvh;
     background-color: #fff;
-    padding: 10px;
+}
+
+
+
+
+.container__aboutus{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     h1{
         font-family: "title";

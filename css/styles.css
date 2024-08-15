@@ -9,6 +9,16 @@ ul {
   box-sizing: border-box;
 }
 
+.item-selected {
+  background-color: #325fa4;
+  border-radius: 10px;
+  padding: 7px 10px;
+}
+.item-selected a {
+  padding: 15px 10px;
+  font-family: "subtitle";
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -31,6 +41,7 @@ ul {
   list-style: none;
 }
 .nav .nav__ul .nav__item {
+  position: relative;
   display: inline-block;
   margin: 0 15px;
   padding: 7px;
@@ -349,7 +360,6 @@ ul {
   font-family: "title";
   font-size: 2.5rem;
   margin: 30px auto;
-  grid-column: 1/span 2;
 }
 
 .nav__category {
@@ -359,7 +369,7 @@ ul {
   align-items: center;
   max-height: 100dvh;
   position: sticky;
-  top: 0px;
+  top: 65px;
   background-color: #eee;
 }
 .nav__category h3 {
@@ -369,20 +379,56 @@ ul {
 .nav__category .category__container {
   list-style: none;
   font-family: "text";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 0;
+  margin-left: 30px;
   margin-bottom: 60px;
+  width: 100%;
 }
 .nav__category .category__container .category__item {
+  position: relative;
+  border-radius: 100px 0px 0px 100px;
+  padding: 10px 10px;
+  margin: 15px;
   font-size: 1.2rem;
-  margin: 30px 0;
+  transition: background-color;
+}
+.nav__category .category__container .category__item:hover {
+  background-color: #fff;
+}
+
+.category__item::before, .category__item::after {
+  content: "";
+  background-color: transparent;
+  position: absolute;
+  right: 0;
+  width: 18px;
+  height: 18px;
+  background-color: transparent;
+}
+
+.category__item:hover::before {
+  top: -18px;
+  border-bottom-right-radius: 25px;
+  box-shadow: 4px 4px 0 4px #fff;
+}
+
+.category__item:hover::after {
+  bottom: -18px;
+  border-top-right-radius: 25px;
+  box-shadow: 4px -4px 0 4px #fff;
 }
 
 .products__container {
   display: grid;
-  grid-template-columns: repeat(3, minmax(250px, 1fr));
-  grid-template-rows: max-content;
-  row-gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-rows: auto-fit;
+  row-gap: 30px;
+  justify-content: center;
   justify-items: center;
+  margin-top: 30px;
 }
 .products__container .item__product {
   display: flex;
@@ -406,12 +452,13 @@ ul {
 }
 .products__container .item__product .item__products__details h5 {
   margin: 0;
-  margin-top: 7px;
+  margin-top: 5px;
   font-size: 1rem;
 }
 .products__container .item__product .item__products__details p {
   font-family: "text";
   font-size: 1rem;
+  margin: 7px;
 }
 .products__container .item__product .item__products__details button {
   margin: 7px 0 10px 0;

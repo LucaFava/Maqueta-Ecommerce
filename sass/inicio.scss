@@ -10,7 +10,19 @@ ul{
     box-sizing: border-box;
 }
 
+
+.item-selected{
+    background-color: #325fa4;
+    border-radius: 10px;
+    padding: 7px 10px;
+    a{
+        padding: 15px 10px;
+        font-family: "subtitle";
+    }
+}
 // ------------ NAV SECTION ---------------
+
+
 
 .nav{
     display: flex;
@@ -33,10 +45,12 @@ ul{
         align-items: center;
         list-style: none;
         .nav__item{
+            position: relative;
             display: inline-block;
             margin: 0 15px;
             padding: 7px;
             transition: transform .2s;
+            
             a{
                 color: var.$color-text;
                 text-decoration: none;
@@ -65,6 +79,10 @@ ul{
 .nav__cart:hover{
     transform: scale(1.1);
 }
+
+
+
+
 
 // ------------ MAIN SECTION ---------------
 .wrapper__main{

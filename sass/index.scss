@@ -8,24 +8,29 @@
 }
 
 
-
-
 .container__aboutus{
     display: flex;
     flex-direction: column;
     align-items: center;
     h1{
+        text-align: center;
         font-family: "title";
-        font-size: 2.5rem;
+        font-size: clamp(1.5rem, 3vw, 2.8rem);
         margin: 30px;
+    }
+    .aboutUs__img{
+        max-width: 100%;
+        height: auto;
     }
     .aboutUs__subtitle{
         font-family: "subtitle";
+        
     }
     .aboutUs__p{
         font-family: "text";
-        font-size: 1.3rem;
+        font-size: clamp(1rem, 1.3vw, 1.5rem);
         max-width: 800px;
+        padding: 0px 20px;
     }
 }
 

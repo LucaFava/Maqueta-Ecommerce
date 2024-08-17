@@ -12,18 +12,22 @@
     <title>(Titulo de la página)</title>
 </head>
 <body>
-    <nav class="nav">
-        <img class="nav__logo" src="" alt="Logo">
-        <ul class="nav__ul"> 
-            <li class="nav__item"><a href="index.html">Sobre Nosotros</a></li>
-            <li class="nav__item"><a href="pages/inicio.html">Inicio</a></li>
-            <li class="nav__item"><a href="pages/productos.html">Productos</a></li>
-            <li class="nav__item"><a href="pages/contacto.html">Contacto</a></li>
-        </ul>
-        <div class="nav__cart">
-            <a href="./pages/carrito.html"><span class="material-symbols-outlined nav__icon">shopping_bag</span></a>
+    <header class="header">
+        <input type="checkbox" class="header__checkbox" id="open-menu">
+        <label for="open-menu" class="header__open-nav-button" role="button"><span class="material-symbols-outlined">menu</span></label>
+        <div class="header__logo-container">
+            <img src="" alt="Logo">
         </div>
-    </nav>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-list-item"><a href="./index.html">Sobre Nosotros</a></li>
+                <li class="header__nav-list-item"><a href="./pages/inicio.html">Inicio</a></li>
+                <li class="header__nav-list-item"><a href="./pages/productos.html">Productos</a></li>
+                <li class="header__nav-list-item"><a href="./pages/contacto.html">Contacto</a></li>
+                <li class="header__cart"><a href="./pages/carrito.html"><span class="material-symbols-outlined">shopping_bag</span></a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="container__main__aboutUs">
         <main class="container__aboutus">
             <h1>(Nombre de la Página)</h1>

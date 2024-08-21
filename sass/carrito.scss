@@ -19,47 +19,72 @@
 // ----------- CART CONTAINER ------------------
 
 .cart__container{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: max-content;
-    place-items: center;
-}
-
-.cart__item{
-    max-width: 550px;
+    padding: 0 30px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "subtitle";
+    flex-direction: column;
+}
+.cart__item{
     border-radius: 10px;
-    background-color: #ddd;
-    padding: 10px 20px;
-    img{
-        width: 80px;
-    }
-    .cart__item__details{
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 12px;
+    .cart__item__name{
         display: flex;
-        flex-direction: column;
-        gap: 5px;
+        align-items: center;
+        font-family: "title";
+        p{
+            font-size: clamp(.7rem, .9vw, 1.2rem);
+        }
+        img{
+            width: 60px;
+        }
     }
     .cart__item__quantity{
-        margin: 6px 0;
+        font-family: "subtitle";
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 7px;
+        .button__quantity{
+            padding: 4px 7px;
+            background-color: #48e;
+            border-radius: 15px;
+            .quantity{
+                margin: 0 6px;
+                color: #fff;
+            }
+            button{
+                background-color: #fff;
+                border: none;
+                border-radius: 10px;
+                font-size: 1rem;
+                &:hover{
+                    opacity: .74;
+                }
+            }
+        }
+    }
+    .cart__item__price{
+        font-family: "subtitle";
+        font-size: 1rem;
     }
     .cart__item__delete{
-        margin: 20px;
-        margin-left: 100px;
         button{
+            padding: 4px 5px;
             border: none;
-            border-radius: 10px;
-            background-color: #f33;
+            border-radius: 5px;
             color: #fff;
-            padding: 5px 8px;
-        }
-        :hover{
-            opacity: .74;
+            background-color: #e11;
+            &:hover{
+                opacity: .74;
+            }
         }
     }
+
 }
+
 
 // ----------- SUMMARY CONTAINER ------------------
 .summary{

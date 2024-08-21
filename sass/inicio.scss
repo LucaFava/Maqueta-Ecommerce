@@ -117,13 +117,15 @@ ul{
         position: relative;
         .header__open-nav-button{
             display: block;
-            color: red;
-            font-size: 3rem;
+            color: #fff;
+            font-size: 2rem;
             position: absolute;
+            top: 3px;
             right: 10px;
         }
         .header__nav{
             display: none;
+            background-color: #fff;
             position: absolute;
             width: 100vw;
             height: 100vh;

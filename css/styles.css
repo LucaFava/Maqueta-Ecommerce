@@ -110,13 +110,15 @@ ul {
   }
   .header .header__open-nav-button {
     display: block;
-    color: red;
-    font-size: 3rem;
+    color: #fff;
+    font-size: 2rem;
     position: absolute;
+    top: 3px;
     right: 10px;
   }
   .header .header__nav {
     display: none;
+    background-color: #fff;
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -303,45 +305,67 @@ ul {
 }
 
 .cart__container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: max-content;
-  place-items: center;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .cart__item {
-  max-width: 550px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "subtitle";
   border-radius: 10px;
-  background-color: #ddd;
-  padding: 10px 20px;
-}
-.cart__item img {
-  width: 80px;
-}
-.cart__item .cart__item__details {
+  background-color: #eee;
   display: flex;
-  flex-direction: column;
-  gap: 5px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 12px;
+}
+.cart__item .cart__item__name {
+  display: flex;
+  align-items: center;
+  font-family: "title";
+}
+.cart__item .cart__item__name p {
+  font-size: clamp(0.7rem, 0.9vw, 1.2rem);
+}
+.cart__item .cart__item__name img {
+  width: 60px;
 }
 .cart__item .cart__item__quantity {
-  margin: 6px 0;
+  font-family: "subtitle";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
 }
-.cart__item .cart__item__delete {
-  margin: 20px;
-  margin-left: 100px;
+.cart__item .cart__item__quantity .button__quantity {
+  padding: 4px 7px;
+  background-color: #48e;
+  border-radius: 15px;
 }
-.cart__item .cart__item__delete button {
+.cart__item .cart__item__quantity .button__quantity .quantity {
+  margin: 0 6px;
+  color: #fff;
+}
+.cart__item .cart__item__quantity .button__quantity button {
+  background-color: #fff;
   border: none;
   border-radius: 10px;
-  background-color: #f33;
-  color: #fff;
-  padding: 5px 8px;
+  font-size: 1rem;
 }
-.cart__item .cart__item__delete :hover {
+.cart__item .cart__item__quantity .button__quantity button:hover {
+  opacity: 0.74;
+}
+.cart__item .cart__item__price {
+  font-family: "subtitle";
+  font-size: 1rem;
+}
+.cart__item .cart__item__delete button {
+  padding: 4px 5px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #e11;
+}
+.cart__item .cart__item__delete button:hover {
   opacity: 0.74;
 }
 
@@ -413,7 +437,7 @@ ul {
 
 .nav__category {
   margin: 40px auto;
-  width: clamp(320px, 50vw, 900px);
+  width: min-content;
   background-color: #fff;
   padding: 20px 0;
 }
@@ -436,17 +460,13 @@ ul {
 
 .products__container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-template-rows: auto-fit;
-  row-gap: 30px;
-  justify-content: center;
-  justify-items: center;
-  margin: 30px 30px;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 30px;
+  margin: 20px 35px;
 }
 .products__container .item__product {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   padding: 8px 15px;
   background-color: #eee;
@@ -454,7 +474,7 @@ ul {
 }
 .products__container .item__product img {
   padding: 10px 0;
-  width: 120px;
+  width: clamp(60px, 6vw, 120px);
 }
 .products__container .item__product .item__products__details {
   display: flex;
@@ -466,12 +486,12 @@ ul {
 .products__container .item__product .item__products__details h5 {
   margin: 0;
   margin-top: 5px;
-  font-size: clamp(0.7rem, 1vw, 1rem);
+  font-size: clamp(0.6rem, 0.9vw, 1rem);
   text-align: center;
 }
 .products__container .item__product .item__products__details p {
   font-family: "text";
-  font-size: clamp(0.7rem, 1vw, 1.3rem);
+  font-size: clamp(0.5rem, 0.9vw, 1rem);
   margin: 7px;
 }
 .products__container .item__product .item__products__details button {
@@ -481,11 +501,18 @@ ul {
   background-color: #48e;
   color: #fff;
   font-family: "subtitle";
+  border: none;
   border-radius: 5px;
   font-size: clamp(0.6rem, 0.8vw, 1rem);
 }
 .products__container .item__product .item__products__details button:hover {
   opacity: 0.74;
+}
+
+@media screen and (max-width: 38.688rem) {
+  .products__container {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

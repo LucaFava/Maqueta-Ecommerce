@@ -116,7 +116,7 @@
 
         .input__container input[type="submit"]{
             padding: 10px 0;
-            background-color: #48e;
+            background-color: var.$bg-color;
             color: #fff;
             border: none;
             font-family: "subtitle";

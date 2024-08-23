@@ -1,10 +1,16 @@
 .container__main__aboutUs{
     max-width: 1200px;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: auto;
+    position: relative;
     background-color: #fff;
+}
+
+.aboutUs__img__fondo{
+    max-width: clamp(400px, 100%, 1920px);
 }
 
 
@@ -19,7 +25,7 @@
         margin: 30px;
     }
     .aboutUs__img{
-        max-width: 100%;
+        max-width: 90%;
         height: auto;
     }
     .aboutUs__subtitle{

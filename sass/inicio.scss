@@ -33,7 +33,7 @@ ul{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var.$main-color;
+    background-color: var.$nav-color;
     padding: 10px 0;
     .header__logo-container{
         margin: 0 20px;
@@ -53,7 +53,7 @@ ul{
                 font-size: clamp(.8rem, 1vw, 1.5rem);
                 transition: transform .2s;
                 a{
-                    color: #fff;
+                    color: #000;
                     text-decoration: none;
                 }
                 &:hover{
@@ -87,7 +87,7 @@ ul{
 
 
 // ------------ MAIN SECTION ---------------
-.wrapper__main{
+.main__inicio{
     box-sizing: border-box;
     margin: auto;
     flex-grow: 1;
